@@ -20,7 +20,7 @@ function App() {
 
 	async function compile() {
 
-		API_KEY = process.env.API_KEY;
+		let API_KEY = process.env.React_App_API_KEY;
 
 		setLoading("true");
 
