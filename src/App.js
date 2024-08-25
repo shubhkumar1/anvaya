@@ -20,8 +20,6 @@ function App() {
 
 	async function compile() {
 
-		let API_KEY = process.env.API_KEY;
-
 		setLoading("true");
 
 		let headersList = {
@@ -50,7 +48,7 @@ function App() {
 			"stdin": userInput
 		});
 
-		let response = await fetch(API_KEY, {
+		let response = await fetch(process.env.API_KEY, {
 			method: "POST",
 			body: bodyContent,
 			headers: headersList,
