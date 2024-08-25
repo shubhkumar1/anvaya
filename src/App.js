@@ -5,6 +5,7 @@ import './App.css';
 
 function App() {
 
+
 	const [userCode, setUserCode] = useState(``);
 	const [userLang, setUserLang] = useState(`python3`);
 	const [userTheme, setUserTheme] = useState(`vs-dark`);
@@ -47,7 +48,7 @@ function App() {
 			"stdin": userInput
 		});
 
-		let response = await fetch("https://emkc.org/api/v2/piston/execute", {
+		let response = await fetch(apiKey, {
 			method: "POST",
 			body: bodyContent,
 			headers: headersList,
@@ -63,34 +64,6 @@ function App() {
 			setUserOutput("Error: " + (error.response ? error.response.data.error : error.message));
 			setLoading("false");
 		}
-
-		// const options = {
-		// 	url: "https://emkc.org/api/v2/piston/execute",
-		// 	method: 'POST',
-		// 	headers: {
-		// 		"Accept": "*/*",
-		// 		"Authorization": "a3eebabdc5c6260cd9d73d36aa12a98c",
-		// 		"Content-Type": "application/json"
-		// 	},
-		// 	body: {
-		// 		"language": userLang,
-		// "version": version,
-		// "files": [
-		// 	{
-		// 		"name": "main",
-		// 		"content": userCode
-		// 	}
-		// ],
-		// "stdin": userInput
-		// 	}
-		// };
-
-		// try {
-		// 	const response = await axios.request(options);
-		// 	
-		// } catch (error) {
-		// 	console.error(error);
-		// }
 	}
 
 	let bgColor;
@@ -160,7 +133,7 @@ function App() {
 								alignItems: 'center',
 								color: "white"
 							}}>
-								<span class="loader" />
+								<span className="loader" />
 								<h3>Loading...</h3>
 							</div>
 						) : (
