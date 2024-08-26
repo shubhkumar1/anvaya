@@ -3,9 +3,11 @@ import Editor from '@monaco-editor/react';
 import Navbar from './Navbar';
 import './App.css';
 
+
 function App() {
-
-
+	
+	let API_KEY = process.env.REACT_APP_API_KEY;
+	
 	const [userCode, setUserCode] = useState(``);
 	const [userLang, setUserLang] = useState(`python3`);
 	const [userTheme, setUserTheme] = useState(`vs-dark`);
@@ -19,8 +21,6 @@ function App() {
 	}
 
 	async function compile() {
-
-		let API_KEY = process.env.API_KEY;
 
 		setLoading("true");
 
@@ -53,11 +53,10 @@ function App() {
 		let response = await fetch(API_KEY, {
 			method: "POST",
 			body: bodyContent,
-			headers: headersList,
+			headers: headersList
 		});
 		try {
 			let data = await response.json();
-			console.log(data);
 			setUserOutput(data.run.stdout || data.run.stderr);
 			setLoading("false");
 		}
