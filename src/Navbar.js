@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
-import { useMediaQuery } from 'react-responsive';
+// import { useMediaQuery } from 'react-responsive';
 
 
 const Navbar = ({ userLang, setUserLang, userTheme, setUserTheme, fontSize, setFontSize, compile }) => {
@@ -32,7 +32,6 @@ const Navbar = ({ userLang, setUserLang, userTheme, setUserTheme, fontSize, setF
         <div style={{
             padding: '10px 0'
         }}>
-            {isDesktopOrLaptop && (
             <div style={{
                 display: "flex",
                 alignItems: "center",
@@ -63,7 +62,7 @@ const Navbar = ({ userLang, setUserLang, userTheme, setUserTheme, fontSize, setF
                     height: "2.5rem",
                     borderRadius: "10px"
                 }}>Run</button>
-            </div> )}
+            </div>
 
         </div>
     )
