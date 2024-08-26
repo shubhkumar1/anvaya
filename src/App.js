@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
 	
-	let API_KEY = process.env.REACT_APP_API_KEY;
+	let API_KEY = process.env.API_KEY;
 	
 	const [userCode, setUserCode] = useState(``);
 	const [userLang, setUserLang] = useState(`python3`);
@@ -50,7 +50,7 @@ function App() {
 			"stdin": userInput
 		});
 
-		let response = await fetch(process.env.API_KEY, {
+		let response = await fetch(API_KEY, {
 			method: "POST",
 			body: bodyContent,
 			headers: headersList
