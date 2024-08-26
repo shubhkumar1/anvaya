@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
 	
-	let API_KEY = process.env.API_KEY;
+	let API_KEY = process.env.REACT_APP_API_KEY;
 	
 	const [userCode, setUserCode] = useState(``);
 	const [userLang, setUserLang] = useState(`python3`);
