@@ -5,7 +5,7 @@ import Select from 'react-select';
 
 const Navbar = ({ userLang, setUserLang, userTheme, setUserTheme, fontSize, setFontSize, compile }) => {
 
-    const isDesktopOrLaptop = useMediaQuery({ minWidth: 1224 })
+    // const isDesktopOrLaptop = useMediaQuery({ minWidth: 1224 })
     // const isBigScreen = useMediaQuery({ minWidth: 1824 })
     // const isTabletOrMobile = useMediaQuery({ maxWidth: 1224 })
     // const isPortrait = useMediaQuery({ orientation: 'portrait' })
