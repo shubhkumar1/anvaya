@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import img1 from "./img1.svg";
 import img2 from "./img2.svg";
 import img3 from "./img3.svg";
