@@ -55,12 +55,15 @@ const Navbar = ({ userLang, setUserLang, userTheme, setUserTheme, fontSize, setF
                     color: fontColor
                 }}>
                     <label>Font Size</label>
-                    <input type='range' min="18" max="30" value={fontSize} step="2" onChange={(e) => { setFontSize(e.target.value) }} />
+                    <input type='range' min="18" max="30" value={fontSize} step="2" onChange={(e) => { setFontSize(e.target.value) }} style={{
+                        cursor: "pointer"
+                    }}/>
                 </div>
                 <button onClick={compile} style={{
                     width: "10rem",
                     height: "2.5rem",
-                    borderRadius: "10px"
+                    borderRadius: "10px",
+                    cursor: "pointer"
                 }}>Run</button>
             </div>
 
